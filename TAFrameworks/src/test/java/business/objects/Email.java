@@ -3,7 +3,6 @@ package business.objects;
 public class Email {
     private final String receiver = "lusine-hakobian@mail.ru";
     private final String subject = "Test Email";
-    private String content = "This is a test email";
 
     public String getReceiver() {
         return receiver;
@@ -14,6 +13,7 @@ public class Email {
     }
 
     public String getContent() {
-        return content;
+        String name = receiver.split("-")[0];
+        return utils.MailTemplate.generateContent(name, new User().getUserName());
     }
 }

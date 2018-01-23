@@ -21,7 +21,7 @@ public class LoginAndSendEmailTest {
     public void init() {
         user = new User();
         email = new Email();
-        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "chromedriver");
 
         driver = new ChromeDriver();
         driver.get(URL);

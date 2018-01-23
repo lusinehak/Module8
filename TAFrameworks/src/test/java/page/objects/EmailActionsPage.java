@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import utils.HihglightElement;
 
 import java.util.List;
 
@@ -66,6 +67,7 @@ public class EmailActionsPage extends GMailAbstractPage {
     private WebElement emptyDraft;
 
     public EmailActionsPage composeAndSaveAsDraft(String receiver, String sbj, String cnt) {
+        new HihglightElement().highlither(driver, goToMail);
         goToMail.click();
         composeEmail.click();
         setReceiver.sendKeys(receiver);
