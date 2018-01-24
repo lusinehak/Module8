@@ -1,3 +1,5 @@
+package tests;
+
 import business.objects.Email;
 import business.objects.User;
 import page.objects.LoginPage;
@@ -21,7 +23,7 @@ public class LoginAndSendEmailTest {
     public void init() {
         user = new User();
         email = new Email();
-        System.setProperty("webdriver.chrome.driver", "chromedriver");
+        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 
         driver = new ChromeDriver();
         driver.get(URL);
